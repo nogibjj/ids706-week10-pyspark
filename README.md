@@ -1,31 +1,42 @@
-# IDS706-python-template [![CI](https://github.com/nogibjj/IDS706-python-template/actions/workflows/ci.yml/badge.svg)](https://github.com/nogibjj/IDS706-python-template/actions/workflows/ci.yml)
+# ids706-week10-pyspark [![CI](https://github.com/nogibjj/ids706-week10-pyspark/actions/workflows/ci.yml/badge.svg)](https://github.com/nogibjj/ids706-week10-pyspark/actions/workflows/ci.yml)
 
-Mini-project 1. 
+### Requirements
+- Use PySpark to perform data processing on a large dataset
+- Include at least one Spark SQL query and one data transformation
+### Grading Criteria
+- Data processing functionality (20 points)
+- Use of Spark SQL and transformations (20 points)
+### Deliverables
+- PySpark script
+- Output data or summary report (PDF or markdown)
 
-## Features
-- Environment Setup: Utilizes .devcontainer to set up a development environment in codespaces, ensuring consistent development environments across contributors.
-- Automated Workflow: Uses a Makefile to automate common tasks such as installation, testing, formatting, and linting.
-- Continuous Integration: Integrated with GitHub Actions to automate testing and other checks on push or pull request.
-- Base Libraries: Includes a foundational set of libraries for DevOps and web development, listed in requirements.txt.
 
-## Repository Structure
-- main.py: The main Python script of the project.
-- test_main.py: Tests associated with the main.py script.
-- .devcontainer: Configuration for setting up a development environment in codespaces.
-- .github: Configuration for GitHub Actions and other GitHub-related settings.
-- requirements.txt: Lists the Python libraries and their versions required for this project.
-- Makefile: Script to automate common tasks.
+# Sales Data Processing with PySpark
 
-## Getting Started
+This project demonstrates how to process a sales dataset using PySpark. The script performs data transformations and executes Spark SQL queries to calculate the total sales per product and find the top-selling products.
 
-1. Create a New Repository: Use this repository as a template to create a new repository.
-2. Clone the Repository: Clone the new repository to your local machine.
-3. Branching: Always create a new branch for your tasks or features.
-4. Development: Make the necessary changes or additions to the project.
-5. Commit and Push: Commit your changes and push them to the repository.
-6. Pull Requests: Create a pull request to merge your changes into the main branch.
-7. Code Review: Ensure your code is reviewed and all checks pass before merging.
-8. Clean-Up: After merging, delete the feature or task branch to keep the repository clean.
+## Prerequisites
 
-## Contribution
-Contributions are welcome! Please ensure you follow the outlined process for development and adhere to best practices.
+- Apache Spark
+- PySpark
+- Python 3.x
+
+Ensure that Java 8 or 11 is installed on your system because PySpark depends on the JVM (Java Virtual Machine).
+
+This will initiate the Spark session and process the embedded sales data within the script.
+
+## Output
+### The script will output two tables:
+
+- The top 10 selling products based on total sales.
+- The original dataset with an additional column, Sale_Category, which categorizes each sale as 'Small' or 'Large' based on the total sale amount.
+
+
+## Generating Summary Report
+### To generate a summary report, follow these steps:
+
+- Run the script as mentioned above.
+- The output will be displayed in the console.
+
+
+![image](result.png)
